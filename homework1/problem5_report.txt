@@ -1,0 +1,2 @@
+Excution time: 598 second(s)
+Size of taqtrade20141201_problem5.txt = 2470160067 bytes.
