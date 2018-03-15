@@ -1,7 +1,6 @@
 
 import numpy as np
 
-
 def max_subarray(L):
     if L == []:
         return 'Empty'
@@ -9,11 +8,14 @@ def max_subarray(L):
     d, index = difference(L,length)
     max = np.max(index[:,1]-index[:,0])
     b = [k for k in range(2 * length) if index[k, 1] - index[k, 0] == max]
-    for i in range(length(b)):
+    result = np.zeros((len(b),2))
+    for i in range(len(b)):
         if i == 0:
             print ("%d to %d" % (index[b[i],0],index[b[i],1]-1))
         else:
             print (" Or %d to %d" % (index[b[i], 0], index[b[i], 1] - 1))
+        result[i,:] = [index[b[i],0],index[b[i],1]-1]
+    return result
 
 
 def difference(L, length):
